@@ -9,7 +9,15 @@ A minimal Node.js + Express application that demonstrates fundamental HTTP conce
 - Basic caching with strong ETags
 - Query parameters & URL encoding (`encodeURIComponent` in the frontend)
 
+# OUTPUT
+
+https://github.com/user-attachments/assets/40c845a5-bf4c-4236-bf88-5b51940afb6d
+
+---
+
 ## Detailed HTTP Learning Guide
+
+
 See `docs/HTTP_TOPICS.md` for an in-depth explanation of each topic:
 1. What is HTTP?
 2. HTTP Parameters (query, path, header, body)
@@ -112,3 +120,4 @@ Deletes a note. Requires `x-api-key`. Returns `204 No Content` when successful.
 - Do not rely on the static API key mechanism for real applications.
 
 Enjoy exploring HTTP! 🚀
+
