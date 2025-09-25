@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTTP Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>HTTP Project</h1>
+      <p>Demonstrating HTTP methods. [GET, POST, PUT, DELETE]</p>
+      <ul class="badges">
+        <li class="badge">GET</li>
+        <li class="badge">POST</li>
+        <li class="badge">PUT</li>
+        <li class="badge">DELETE</li>
+      </ul>
+    </header>
+
+    <main>
+      <div class="left-col">
+        <section class="panel" id="search-section">
+          <h2>Search Notes</h2>
+          <form id="search-form">
+            <label for="search-input">Keyword</label>
+            <input type="text" id="search-input" placeholder="write any keyword" />
+            <div class="actions-row">
+              <button type="submit">Search</button>
+              <button class="secondary" id="clear-search" type="button">Clear</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel" id="create-section">
+          <h2>Create Note</h2>
+          <form id="create-form">
+            <label for="title-input">Title</label>
+            <input required id="title-input" type="text" />
+            <label for="content-input">Content</label>
+            <textarea required id="content-input" rows="4"></textarea>
+            <div class="actions-row">
+              <button type="submit">Add Note</button>
+              <button class="secondary" type="reset">Reset</button>
+            </div>
+            <div id="create-status" class="status" aria-live="polite"></div>
+          </form>
+        </section>
+
+        <section class="panel" id="notes-list-section">
+          <h2>All Notes</h2>
+          <div id="notes-count" class="status" aria-live="polite"></div>
+          <div id="notes-list" class="notes-grid"></div>
+        </section>
+      </div>
+
+      <section class="panel" id="single-note-section">
+        <div class="viewer-header">
+          <h3 style="margin:0;">Note Viewer (HTML)</h3>
+          <button id="close-note" class="secondary" type="button">Close</button>
+        </div>
+        <div class="viewer">
+          <iframe id="note-frame" title="Note View" loading="lazy"></iframe>
+        </div>
+        <hr />
+        <h3 style="margin-top:.2rem;">Edit / Delete</h3>
+        <form id="edit-form">
+          <input type="hidden" id="edit-id" />
+          <label for="edit-title">Title</label>
+          <input id="edit-title" type="text" required />
+          <label for="edit-content">Content</label>
+          <textarea id="edit-content" rows="4" required></textarea>
+          <div class="actions-row">
+            <button type="submit">Update (PUT)</button>
+            <button id="delete-note" class="danger" type="button">Delete (DELETE)</button>
+          </div>
+          <div id="edit-status" class="status" aria-live="polite"></div>
+        </form>
+      </section>
+    </main>
+
+   
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

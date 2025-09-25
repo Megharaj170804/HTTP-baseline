@@ -1,0 +1,19 @@
+{
+  "name": "notes-http-project",
+  "version": "1.0.0",
+  "description": "Notes HTTP Project demonstrating REST, caching (ETag), content negotiation, and common HTTP headers.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["express", "notes", "http", "etag", "content-negotiation", "rest"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "etag": "^1.8.1"
+  }
+}
